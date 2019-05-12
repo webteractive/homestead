@@ -23,7 +23,7 @@ class Homestead
 
     # Configure A Private Network IP
     if settings['ip'] != 'autonetwork'
-      config.vm.network :private_network, ip: settings['ip'] ||= '192.168.03.14'
+      config.vm.network :private_network, ip: settings['ip'] ||= '192.168.3.14'
     else
       config.vm.network :private_network, ip: '0.0.0.0', auto_network: true
     end
