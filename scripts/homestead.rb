@@ -16,14 +16,14 @@ class Homestead
     end
 
     # Configure The Box
-    config.vm.define settings['name'] ||= 'homestead-7'
-    config.vm.box = settings['box'] ||= 'laravel/homestead'
-    config.vm.box_version = settings['version'] ||= '>= 7.2.1'
-    config.vm.hostname = settings['hostname'] ||= 'homestead'
+    config.vm.define settings['name'] ||= 'circuitstead'
+    config.vm.box = settings['box'] ||= 'webteractive/circuitstead'
+    config.vm.box_version = settings['version'] ||= '>= 1.0.1'
+    config.vm.hostname = settings['hostname'] ||= 'circuitstead'
 
     # Configure A Private Network IP
     if settings['ip'] != 'autonetwork'
-      config.vm.network :private_network, ip: settings['ip'] ||= '192.168.10.10'
+      config.vm.network :private_network, ip: settings['ip'] ||= '192.168.03.14'
     else
       config.vm.network :private_network, ip: '0.0.0.0', auto_network: true
     end
